@@ -10,8 +10,6 @@
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
-const tableDocument = document.querySelector('#name-table');
-console.log(tableDocument)
 
 // creare l'array di oggetti con nome, ruolo e foto
 const arrayList = [
@@ -53,6 +51,10 @@ const arrayList = [
     },
 
 ];
+// tabella elemento del dom
+const tableDocument = document.querySelector('#name-table');
+console.log(tableDocument)
+
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 for(let i = 0; i < arrayList.length; i++){
     const thisInfo = arrayList[i];
