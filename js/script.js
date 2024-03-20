@@ -10,6 +10,9 @@
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
+const tableDocument = document.querySelector('#name-table');
+console.log(tableDocument)
+
 // creare l'array di oggetti con nome, ruolo e foto
 const arrayList = [
     {
@@ -57,6 +60,17 @@ for(let i = 0; i < arrayList.length; i++){
 
     for(let key in thisInfo){
         console.log(key + ' - ' + thisInfo[key])
+
     }
+
+    // Stampare le stesse informazioni su DOM sottoforma di stringhe
+    const newTable = `
+    <tr>
+        <td>${thisInfo.firstName} ${thisInfo.lastName}</td>
+        <td>${thisInfo.role}</td>
+        <td>${thisInfo.image}</td>
+    </tr>
+    `;
+
+    tableDocument.innerHTML += newTable;
 }
-// Stampare le stesse informazioni su DOM sottoforma di stringhe
